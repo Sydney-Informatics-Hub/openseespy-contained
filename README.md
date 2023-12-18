@@ -1,4 +1,4 @@
-# Space Ranger Container
+# Ultralytics YOLOv8 Container
 
 Docker/Singularity image to run [YOLOv8](https://github.com/ultralytics/ultralytics) on Centos 6.9 kernel 
 
