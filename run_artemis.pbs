@@ -1,4 +1,4 @@
-#PBS -P soil_HPC
+#PBS -P osp_HPC
 #PBS -l select=1:ncpus=4:mem=16gb
 #PBS -l walltime=2:00:00
 #PBS -N job01
@@ -13,8 +13,8 @@ cd $PBS_O_WORKDIR
 # If these are not set, it defaults to your home foler which will fill up very quickly.
 #export SINGULARITY_CACHEDIR=`pwd`
 #export SINGULARITY_TMPDIR=`pwd`
-#singularity build soil.img docker://sydneyinformaticshub/soil:newversions
+#singularity build openseespy.img docker://sydneyinformaticshub/openseespy
 
 ### 2 EXAMPLE WORKFLOW ###
 # Remove the build commands above and execute:
-singularity run --bind /project:/project soil.img /bin/bash -c "/build/miniconda3/bin/python harwood_root_soil_hpc.py"
+singularity run openseespy.img /bin/bash -c "python ElasticTruss.py"
