@@ -5,7 +5,7 @@
 
 #To run this, mounting your current host directory in the container directory,
 # at /project, and excute an example run:
-#sudo docker run -it -v `pwd`:/project sydneyinformaticshub/openseespy /bin/bash -c "cd /project && python test.py"
+#sudo docker run -it -v `pwd`:/project sydneyinformaticshub/openseespy /bin/bash -c "cd /project && python ElasticTruss.py"
 
 #To push to docker hub:
 #sudo docker push sydneyinformaticshub/openseespy
@@ -16,7 +16,7 @@
 #singularity build openseespy.img docker://sydneyinformaticshub/openseespy
 
 #To run the singularity image (noting singularity mounts the current folder by default)
-#singularity run --bind /project:/project openseespy.img /bin/bash -c "cd "$PBS_O_WORKDIR" && python test.py"
+#singularity run --bind /project:/project openseespy.img /bin/bash -c "cd "$PBS_O_WORKDIR" && python ElasticTruss.py"
 
 # Pull base image.
 FROM ubuntu:16.04
