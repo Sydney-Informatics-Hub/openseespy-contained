@@ -45,7 +45,8 @@ ARG PATH="/build/miniconda3/bin:${PATH}"
 RUN conda install pip
 RUN pip install --upgrade pip
 
-RUN pip install openseespy==3.5.1.12 && \
+RUN pip install -U openseespy==0.5.10 && \
+pip install matplotlib==3.7.5 && \
 pip cache purge
 
 CMD /bin/bash
